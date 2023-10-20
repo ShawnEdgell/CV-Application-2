@@ -46,23 +46,19 @@
     }
 </script>
 
-<h2>Education</h2>
 <!-- Education Form -->
 <form on:submit={handleSubmit}>
-    <label for="school">School:</label>
-    <input type="text" id="school" bind:value={school} required autocomplete="off" />
+    <input placeholder="School" type="text" id="school" bind:value={school} required autocomplete="off" />
 
-    <label for="degree">Degree:</label>
-    <input type="text" id="degree" bind:value={degree} required autocomplete="off" />
+    <input placeholder="Degree" type="text" id="degree" bind:value={degree} required autocomplete="off" />
+
+    <input placeholder="Location" type="text" id="location" bind:value={location} required autocomplete="off" />
 
     <label for="startDate">Start Date:</label>
     <input type="date" id="startDate" bind:value={startDate} required autocomplete="off" />
 
     <label for="endDate">End Date:</label>
     <input type="date" id="endDate" bind:value={endDate} required autocomplete="off" />
-
-    <label for="location">Location:</label>
-    <input type="text" id="location" bind:value={location} required autocomplete="off" />
 
     <button type="submit">Add Education</button>
 </form>
@@ -75,9 +71,9 @@
                 <h3>Entry {i + 1}</h3>
                 <p>School: {entry.school}</p>
                 <p>Degree: {entry.degree}</p>
+                <p>Location: {entry.location}</p>
                 <p>Start Date: {entry.startDate}</p>
                 <p>End Date: {entry.endDate}</p>
-                <p>Location: {entry.location}</p>
                 <button on:click={() => removeEntry(entry.id)}>Remove</button>
             </div>
         {/each}

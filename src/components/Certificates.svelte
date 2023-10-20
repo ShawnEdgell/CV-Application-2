@@ -22,11 +22,9 @@
     }
 </script>
 
-<h2>Certificates</h2>
 <!-- Certificate Form -->
 <form on:submit={handleSubmit}>
-    <label for="certificateTitle">Certificate Title:</label>
-    <input type="text" id="certificateTitle" bind:value={certificateTitle} required />
+    <input placeholder="Certificate" type="text" id="certificateTitle" bind:value={certificateTitle} required />
     <button type="submit">Add Certificate</button>
 </form>
 

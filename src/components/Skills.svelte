@@ -26,11 +26,9 @@
     }
 </script>
 
-<h2>Skills</h2>
 <!-- Skills Form -->
 <form on:submit={handleSubmit}>
-    <label for="skill">Skill:</label>
-    <input type="text" id="skill" bind:value={skill} required />
+    <input placeholder="Skill" type="text" id="skill" bind:value={skill} required />
 
     <button type="submit">Add Skill</button>
 </form>

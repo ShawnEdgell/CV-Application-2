@@ -57,14 +57,13 @@
     }
 </script>
 
-<h2>Experience</h2>
 <!-- Experience Form -->
 <form on:submit={handleSubmit}>
-    <label for="companyName">Company Name:</label>
-    <input type="text" id="companyName" bind:value={experience.companyName} required />
+    <input placeholder="Company Name" type="text" id="companyName" bind:value={experience.companyName} required />
 
-    <label for="positionTitle">Position Title:</label>
-    <input type="text" id="positionTitle" bind:value={experience.positionTitle} required />
+    <input placeholder="Position Title" type="text" id="positionTitle" bind:value={experience.positionTitle} required />
+
+    <input placeholder="Location" type="text" id="location" bind:value={experience.location} required />
 
     <label for="startDate">Start Date:</label>
     <input type="date" id="startDate" bind:value={experience.startDate} required />
@@ -72,11 +71,7 @@
     <label for="endDate">End Date:</label>
     <input type="date" id="endDate" bind:value={experience.endDate} required />
 
-    <label for="location">Location:</label>
-    <input type="text" id="location" bind:value={experience.location} required />
-
-    <label for="description">Description:</label>
-    <textarea id="description" bind:value={experience.description} required></textarea>
+    <textarea placeholder="Description (optional)" id="description" bind:value={experience.description} ></textarea>
 
     <button type="submit">Add Experience</button>
 </form>
@@ -89,9 +84,9 @@
                 <h3>Entry {i + 1}</h3>
                 <p>Company Name: {entry.companyName}</p>
                 <p>Position Title: {entry.positionTitle}</p>
+                <p>Location: {entry.location}</p>
                 <p>Start Date: {entry.startDate}</p>
                 <p>End Date: {entry.endDate}</p>
-                <p>Location: {entry.location}</p>
                 <p>Description: {entry.description}</p>
                 <button on:click={() => removeExperience(i)}>Remove</button>
             </div>

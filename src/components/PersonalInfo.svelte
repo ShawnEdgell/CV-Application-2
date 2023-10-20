@@ -8,20 +8,15 @@
     };
   </script>
   
-  <h2>Personal Info</h2>
   <!-- Personal Info Form -->
   <form>
-    <label for="name">Name:</label>
-    <input type="text" id="name" bind:value={personalDetails.name} autocomplete="off" />
+    <input placeholder="Name" type="text" id="name" bind:value={personalDetails.name} autocomplete="off" />
+
+    <input placeholder="Address" type="text" id="address" bind:value={personalDetails.address} autocomplete="off" />
   
-    <label for="address">Address:</label>
-    <input type="text" id="address" bind:value={personalDetails.address} autocomplete="off" />
+    <input placeholder="Email" type="email" id="email" bind:value={personalDetails.email} autocomplete="off" />
   
-    <label for="email">Email:</label>
-    <input type="email" id="email" bind:value={personalDetails.email} autocomplete="off" />
-  
-    <label for="phoneNumber">Phone Number:</label>
-    <input type="tel" id="phoneNumber" bind:value={personalDetails.phoneNumber} autocomplete="off" />
+    <input placeholder="Phone Number" type="tel" id="phoneNumber" bind:value={personalDetails.phoneNumber} autocomplete="off" />
   </form>
 
   <style>
