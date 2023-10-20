@@ -1,3 +1,4 @@
+<!-- App.svelte -->
 <script>
   // Other imports and variables
   import PersonalInfo from './components/PersonalInfo.svelte';
@@ -7,7 +8,6 @@
   import Certificates from './components/Certificates.svelte';
 </script>
 
-<!-- Main layout -->
 <main>
   <h1>CV Creator</h1>
   <PersonalInfo />

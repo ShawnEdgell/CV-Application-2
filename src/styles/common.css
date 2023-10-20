@@ -14,3 +14,8 @@ form {
     flex-direction: column;
     max-width: 50%;
 }
+
+textarea {
+    min-width: 99%;
+    max-width: 99%;
+}
