@@ -1,8 +1,10 @@
 import { defineConfig } from 'vite';
 import { svelte } from '@sveltejs/vite-plugin-svelte';
+import ViteSvg from 'vite-plugin-svgr';
+
 
 export default defineConfig({
-  plugins: [svelte()],
+  plugins: [svelte(), ViteSvg()],
   build: {
     outDir: 'public',
   },

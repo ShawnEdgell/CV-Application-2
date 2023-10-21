@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "svelte-routing": "^2.5.0",
-    "uuid": "^9.0.1"
+    "uuid": "^9.0.1",
+    "vite-plugin-svgr": "^4.1.0"
   }
 }
