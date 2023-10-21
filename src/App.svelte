@@ -27,33 +27,41 @@
   <div class="left-container">
 
     <!-- Personal Info Section -->
-    <button class="main-buttons" on:click={() => toggleSection('personalInfo')}>Personal Info</button>
-    <div class="section {openSection === 'personalInfo' && 'open'}">
+    <div class="section-container open">
+    <h2 class="main-section">Personal Info</h2>
       <PersonalInfo />
     </div>
   
     <!-- Education Section -->
+    <div class="section-container">
     <button class="main-buttons" on:click={() => toggleSection('education')}>Education</button>
     <div class="section {openSection === 'education' && 'open'}">
       <Education />
     </div>
+    </div>
   
     <!-- Experience Section -->
+    <div class="section-container">
     <button class="main-buttons" on:click={() => toggleSection('experience')}>Experience</button>
     <div class="section {openSection === 'experience' && 'open'}">
       <Experience />
     </div>
+    </div>
   
     <!-- Skills Section -->
+    <div class="section-container">
     <button class="main-buttons" on:click={() => toggleSection('skills')}>Skills</button>
     <div class="section {openSection === 'skills' && 'open'}">
       <Skills />
     </div>
+    </div>
   
     <!-- Certificates Section -->
+    <div class="section-container">
     <button class="main-buttons" on:click={() => toggleSection('certificates')}>Certificates</button>
     <div class="section {openSection === 'certificates' && 'open'}">
       <Certificates />
+    </div>
     </div>
   
   <!-- Add more sections/components as needed -->
