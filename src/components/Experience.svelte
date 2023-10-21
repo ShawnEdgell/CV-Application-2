@@ -59,17 +59,17 @@
 
 <!-- Experience Form -->
 <form on:submit={handleSubmit}>
-    <input placeholder="Company Name" type="text" id="companyName" bind:value={experience.companyName} required />
+    <input placeholder="Company Name" type="text" id="companyName" bind:value={experience.companyName} autocomplete="off" required />
 
-    <input placeholder="Position Title" type="text" id="positionTitle" bind:value={experience.positionTitle} required />
+    <input placeholder="Position Title" type="text" id="positionTitle" bind:value={experience.positionTitle} autocomplete="off" required />
 
-    <input placeholder="Location" type="text" id="location" bind:value={experience.location} required />
+    <input placeholder="Location" type="text" id="location" bind:value={experience.location} autocomplete="off" required />
 
     <label for="startDate">Start Date:</label>
-    <input type="date" id="startDate" bind:value={experience.startDate} required />
+    <input type="date" id="startDate" bind:value={experience.startDate} autocomplete="off" required />
 
     <label for="endDate">End Date:</label>
-    <input type="date" id="endDate" bind:value={experience.endDate} required />
+    <input type="date" id="endDate" bind:value={experience.endDate} autocomplete="off" required />
 
     <textarea placeholder="Description (optional)" id="description" bind:value={experience.description} ></textarea>
 
