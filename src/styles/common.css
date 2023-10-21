@@ -122,10 +122,3 @@ button[type="submit"]:hover {
     display: flex;
    margin-left: auto;
 }
-
-.education-entry, .experience-entry,
-.skill-entry, .certificate-entry {
-    display: flex;
-    flex-direction: column;
-    padding: 0 20px 20px 20px;
-}

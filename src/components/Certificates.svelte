@@ -1,7 +1,13 @@
 <!-- Certificates.svelte -->
 <script>
+    import { certificateListStore } from '../stores/certificateList'; // Adjust the import path as needed
+    
     let certificateTitle = '';
     let certificateList = [];
+
+    certificateListStore.subscribe(($certificateList) => {
+        certificateList = $certificateList;
+    });
 
     function handleSubmit(event) {
         event.preventDefault();
@@ -11,20 +17,23 @@
             return;
         }
 
-        certificateList = [...certificateList, certificateTitle];
-        certificateTitle = ''; // Clear the input field
+        certificateListStore.update((currentList) => [...currentList, certificateTitle]);
+        clearForm();
+    }
+
+    function clearForm() {
+        certificateTitle = '';
     }
 
     function removeCertificate(index) {
-        certificateList.splice(index, 1);
-        // Update the certificateList to trigger reactivity
-        certificateList = [...certificateList];
+        certificateListStore.update((currentList) => currentList.filter((_, i) => i !== index));
     }
+
 </script>
 
 <!-- Certificate Form -->
 <form on:submit={handleSubmit}>
-    <input placeholder="Certificate" type="text" id="certificateTitle" bind:value={certificateTitle} required />
+    <input autocomplete="off" placeholder="Certificate" type="text" id="certificateTitle" bind:value={certificateTitle} required />
     <button type="submit">Add Certificate</button>
 </form>
 
@@ -41,8 +50,5 @@
 {/if}
 
 <style>
-    /* Link to the common.css stylesheet using a relative path */
     @import '../styles/common.css';
-
-    /* Additional component-specific styles if needed */
 </style>
