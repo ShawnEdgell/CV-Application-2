@@ -21,13 +21,25 @@ img {
 
 .left-container {
     max-width: 400px;
-    padding: 16px;
+}
+
+.right-container {
+    border: 1px solid black;
+    min-width: 800px;
+    min-height: 1128px;
 }
 
 .section-container {
     background-color: lightgrey;
     border-radius: 8px;
     margin-bottom: 10px;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+    gap: 16px;
 }
 
 .main-buttons {
