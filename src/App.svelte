@@ -28,41 +28,78 @@
 
     <!-- Personal Info Section -->
     <div class="section-container open">
-    <h2 class="main-section">Personal Info</h2>
+    <h2 class="main-section"><img src="./src/images/user.svg" alt="Info Icon">Personal Info</h2>
       <PersonalInfo />
     </div>
   
-    <!-- Education Section -->
-    <div class="section-container">
-    <button class="main-buttons" on:click={() => toggleSection('education')}>Education</button>
-    <div class="section {openSection === 'education' && 'open'}">
+<!-- Education Section -->
+<div class="section-container">
+  <button class="main-buttons" on:click={() => toggleSection('education')}>
+      <img src="./src/images/education.svg" alt="Info Icon">Education
+      <span class="icon">
+          {#if openSection === 'education'}
+              <img src="./src/images/minus.svg" alt="-">
+          {:else}
+              <img src="./src/images/plus.svg" alt="+">
+          {/if}
+      </span>
+  </button>
+  <div class="section {openSection === 'education' && 'open'}">
       <Education />
-    </div>
-    </div>
-  
-    <!-- Experience Section -->
-    <div class="section-container">
-    <button class="main-buttons" on:click={() => toggleSection('experience')}>Experience</button>
-    <div class="section {openSection === 'experience' && 'open'}">
+  </div>
+</div>
+
+
+<!-- Experience Section -->
+<div class="section-container">
+  <button class="main-buttons" on:click={() => toggleSection('experience')}>
+      <img src="./src/images/experience.svg" alt="Info Icon">Experience
+      <span class="icon">
+          {#if openSection === 'experience'}
+              <img src="./src/images/minus.svg" alt="-">
+          {:else}
+              <img src="./src/images/plus.svg" alt="+">
+          {/if}
+      </span>
+  </button>
+  <div class="section {openSection === 'experience' && 'open'}">
       <Experience />
-    </div>
-    </div>
-  
-    <!-- Skills Section -->
-    <div class="section-container">
-    <button class="main-buttons" on:click={() => toggleSection('skills')}>Skills</button>
-    <div class="section {openSection === 'skills' && 'open'}">
+  </div>
+</div>
+
+<!-- Skills Section -->
+<div class="section-container">
+  <button class="main-buttons" on:click={() => toggleSection('skills')}>
+      <img src="./src/images/skills.svg" alt="Info Icon">Skills
+      <span class="icon">
+          {#if openSection === 'skills'}
+              <img src="./src/images/minus.svg" alt="-">
+          {:else}
+              <img src="./src/images/plus.svg" alt="+">
+          {/if}
+      </span>
+  </button>
+  <div class="section {openSection === 'skills' && 'open'}">
       <Skills />
-    </div>
-    </div>
-  
-    <!-- Certificates Section -->
-    <div class="section-container">
-    <button class="main-buttons" on:click={() => toggleSection('certificates')}>Certificates</button>
-    <div class="section {openSection === 'certificates' && 'open'}">
+  </div>
+</div>
+
+<!-- Certificates Section -->
+<div class="section-container">
+  <button class="main-buttons" on:click={() => toggleSection('certificates')}>
+      <img src="./src/images/certificates.svg" alt="Info Icon">Certificates
+      <span class="icon">
+          {#if openSection === 'certificates'}
+              <img src="./src/images/minus.svg" alt="-">
+          {:else}
+              <img src="./src/images/plus.svg" alt="+">
+          {/if}
+      </span>
+  </button>
+  <div class="section {openSection === 'certificates' && 'open'}">
       <Certificates />
-    </div>
-    </div>
+  </div>
+</div>
   
   <!-- Add more sections/components as needed -->
 </main>

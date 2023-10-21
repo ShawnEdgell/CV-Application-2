@@ -12,7 +12,11 @@ h1 {
 }
 
 h2 {
-    padding: 10px 0;
+    padding: 10px 0 10px 20px;
+}
+
+img {
+    width: 18px;
 }
 
 .left-container {
@@ -28,6 +32,7 @@ h2 {
 
 .main-buttons {
     background-color: transparent;
+    text-align: left;
     font-weight: 600;
     width: 100%;
     font-size: 20px;
@@ -35,14 +40,18 @@ h2 {
     border: none;
     cursor: pointer;
     border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .main-section {
-    text-align: center;
     font-weight: 600;
     width: 100%;
     font-size: 20px;
-    border-radius: px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 form {
@@ -95,4 +104,9 @@ button[type="submit"]:hover {
 .section.open {
     opacity: 1;
     max-height: 1000px;
+}
+
+.icon {
+    display: flex;
+   margin-left: auto;
 }
